@@ -16,7 +16,7 @@ export function ProjectsGrid() {
             {PROJECT_DATA.map((item, index) => (
                 <motion.div
                     key={item.title}
-                    className="space-y-4"
+                    className="group space-y-4"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{
@@ -25,7 +25,7 @@ export function ProjectsGrid() {
                         ease: "easeOut",
                     }}
                 >
-                    <div className="group aspect-video overflow-hidden rounded-md bg-neutral-800">
+                    <div className="group/image peer/image aspect-video overflow-hidden rounded-md bg-neutral-800">
                         <Image
                             src={item.image}
                             alt={item.title}
@@ -33,17 +33,29 @@ export function ProjectsGrid() {
                             height={0}
                             className={cn(
                                 "w-full object-cover",
-                                "transition-all duration-200 ease-in-out group-hover:scale-[1.025]"
+                                "transition-all duration-200 ease-in-out group-hover/image:scale-[1.025]"
                             )}
                         />
                     </div>
 
-                    <div className="">
-                        <div className="text-lg leading-tight text-neutral-200">
+                    <div
+                        className={cn(
+                            "peer-hover/image:*:text-custom-primary" // *: targets descendants
+                        )}
+                    >
+                        <div
+                            className={cn(
+                                "text-lg leading-tight text-neutral-200 transition-colors duration-200 ease-in-out"
+                            )}
+                        >
                             {item.title}
                         </div>
 
-                        <div className="text-base text-neutral-400">
+                        <div
+                            className={cn(
+                                "text-base !text-neutral-400" // selector for descendants needs to be overridden
+                            )}
+                        >
                             {item.description}
                         </div>
                     </div>
