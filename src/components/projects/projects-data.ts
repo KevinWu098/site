@@ -1,4 +1,8 @@
-import { cn } from "@/lib/utils";
+export type Badges = {
+    work?: boolean;
+    project?: boolean;
+    hackathon?: boolean;
+};
 
 type Project = {
     title: string;
@@ -6,6 +10,7 @@ type Project = {
     image: string;
     year: number;
     className?: string;
+    badges?: Badges;
 };
 
 export const PROJECT_DATA: Project[] = [
@@ -14,6 +19,9 @@ export const PROJECT_DATA: Project[] = [
         description: "Amplify engineering productivity",
         image: "/work/fusion.jpeg",
         year: 2024,
+        badges: {
+            work: true,
+        },
     },
     {
         title: "Dispatch AI",
@@ -29,13 +37,13 @@ export const PROJECT_DATA: Project[] = [
     },
     {
         title: "GE-Z",
-        description: "Find community college credits that transfer to your UC",
+        description: "Find community college credits that transfer to UCs",
         image: "/work/antalmanac.png",
         year: 2024,
     },
     {
         title: "Sentinel",
-        description: "Realtime identification for drowsy, distracted driving",
+        description: "Detect distracted, fatigued driving",
         image: "/work/antalmanac.png",
         year: 2024,
     },

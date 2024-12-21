@@ -9,7 +9,7 @@ export function ProjectsGrid() {
     return (
         <div
             className={cn(
-                "grid gap-4",
+                "grid gap-6",
                 "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
             )}
         >
@@ -45,7 +45,8 @@ export function ProjectsGrid() {
                     >
                         <div
                             className={cn(
-                                "text-lg leading-tight text-neutral-200 transition-colors duration-200 ease-in-out"
+                                "flex justify-between",
+                                "text-custom-heading text-lg leading-tight transition-colors duration-200 ease-in-out"
                             )}
                         >
                             {item.title}
@@ -53,7 +54,7 @@ export function ProjectsGrid() {
 
                         <div
                             className={cn(
-                                "text-base !text-neutral-400" // selector for descendants needs to be overridden
+                                "!text-custom-muted text-base" // selector for descendants needs to be overridden
                             )}
                         >
                             {item.description}

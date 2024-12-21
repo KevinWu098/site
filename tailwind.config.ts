@@ -56,8 +56,10 @@ const config: Config = {
                     "5": "hsl(var(--chart-5))",
                 },
                 custom: {
-                    text: "#d4d4d4",
-                    primary: "#818cf8",
+                    text: "#f5f5f5",
+                    muted: "#a3a3a3",
+                    heading: "#f5f5f5",
+                    primary: "#16a34a",
                     secondary: "",
                 },
             },
@@ -68,6 +70,21 @@ const config: Config = {
             },
             spacing: {
                 100: "25rem",
+            },
+            animation: {
+                text: "text 5s ease infinite",
+            },
+            keyframes: {
+                text: {
+                    "0%, 100%": {
+                        "background-size": "200% 200%",
+                        "background-position": "left center",
+                    },
+                    "50%": {
+                        "background-size": "200% 200%",
+                        "background-position": "right center",
+                    },
+                },
             },
         },
     },
