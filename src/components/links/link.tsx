@@ -12,7 +12,7 @@ export function LinkIcon({ iconLink }: { iconLink: IconLink }) {
         >
             <Icon
                 size={20}
-                className="text-custom-text transition-all duration-200 group-hover:opacity-75"
+                className="text-custom-text transition-all duration-300 group-hover:opacity-75"
             />
         </Link>
     );

@@ -78,4 +78,7 @@ body {
     img {
         @apply pointer-events-none;
     }
+    a {
+        @apply hover:decoration-custom-primary transition-all duration-300;
+    }
 }

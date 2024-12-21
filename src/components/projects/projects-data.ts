@@ -11,6 +11,7 @@ type Project = {
     year: number;
     className?: string;
     badges?: Badges;
+    href?: string;
 };
 
 export const PROJECT_DATA: Project[] = [
@@ -22,6 +23,7 @@ export const PROJECT_DATA: Project[] = [
         badges: {
             work: true,
         },
+        href: "https://www.stokespace.com/",
     },
     {
         title: "Dispatch AI",
@@ -43,8 +45,68 @@ export const PROJECT_DATA: Project[] = [
     },
     {
         title: "Sentinel",
-        description: "Detect distracted, fatigued driving",
+        description: "Proactively detect distracted, fatigued driving",
         image: "/work/antalmanac.png",
+        year: 2024,
+    },
+    {
+        title: "Radioactive Duck Hunt",
+        description: "Duck Hunt + ASL + Nuclear Fallout",
+        image: "/work/antalmanac.png",
+        year: 2024,
+    },
+    {
+        title: "Agentic",
+        description: "HTML-powered Large Action Model",
+        image: "/landing/bonfire.jpg",
+        year: 2024,
+    },
+    {
+        title: "Radioactive Duck Hunt",
+        description: "Duck Hunt + ASL + Nuclear Fallout",
+        image: "/work/antalmanac.png",
+        year: 2024,
+    },
+    {
+        title: "Agentic",
+        description: "HTML-powered Large Action Model",
+        image: "/landing/bonfire.jpg",
+        year: 2024,
+    },
+    {
+        title: "Radioactive Duck Hunt",
+        description: "Duck Hunt + ASL + Nuclear Fallout",
+        image: "/work/antalmanac.png",
+        year: 2024,
+    },
+    {
+        title: "Agentic",
+        description: "HTML-powered Large Action Model",
+        image: "/landing/bonfire.jpg",
+        year: 2024,
+    },
+    {
+        title: "Radioactive Duck Hunt",
+        description: "Duck Hunt + ASL + Nuclear Fallout",
+        image: "/work/antalmanac.png",
+        year: 2024,
+    },
+    {
+        title: "Agentic",
+        description: "HTML-powered Large Action Model",
+        image: "/landing/bonfire.jpg",
+        year: 2024,
+    },
+    {
+        title: "Radioactive Duck Hunt",
+        description: "Duck Hunt + ASL + Nuclear Fallout",
+        image: "/work/antalmanac.png",
+        year: 2024,
+    },
+    {
+        title: "Agentic",
+        description: "HTML-powered Large Action Model",
+        image: "/landing/bonfire.jpg",
         year: 2024,
     },
     {
