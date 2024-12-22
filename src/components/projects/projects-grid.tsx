@@ -1,11 +1,10 @@
 "use client";
 
-import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { PROJECT_DATA } from "@/components/projects/projects-data";
 import { cn } from "@/lib/utils";
-import { motion, useInView } from "motion/react";
+import { motion } from "motion/react";
 
 export function ProjectsGrid() {
     return (
@@ -27,7 +26,7 @@ export function ProjectsGrid() {
                 },
             }}
         >
-            {PROJECT_DATA.map((item, index) => {
+            {PROJECT_DATA.map((item) => {
                 return (
                     <motion.div
                         key={item.title}

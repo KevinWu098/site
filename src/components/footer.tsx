@@ -1,13 +1,5 @@
 import { Playfair_Display } from "next/font/google";
-import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
-
-const font = Playfair_Display({
-    subsets: ["latin"],
-    style: ["normal", "italic"],
-    weight: ["400", "500", "600", "700"],
-    display: "swap",
-});
 
 export function Footer() {
     return (
@@ -19,8 +11,7 @@ export function Footer() {
 
                 <p
                     className={cn(
-                        font.className,
-                        "text-custom-primary text-pla min-w-fit whitespace-nowrap text-lg italic"
+                        "text-custom-primary font-playfair-display min-w-fit whitespace-nowrap text-lg italic"
                     )}
                 >
                     Kevin Wu

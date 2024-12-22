@@ -1,4 +1,3 @@
-import { Playfair_Display } from "next/font/google";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
@@ -15,7 +14,7 @@ export function Hero() {
 
             <div className="space-y-2">
                 <p className="text-pretty text-lg">
-                    I'm a fullstack developer building products,{" "}
+                    I&apos;m a fullstack developer building products,{" "}
                     <Link
                         href={"https://www.devpost.com/kevinwu098"}
                         className="underline underline-offset-2"
@@ -28,8 +27,8 @@ export function Hero() {
                 </p>
                 <p className="text-pretty text-lg">
                     Studying Computer Science at the University of California,
-                    Irvine. When not in lecture, I'm crafting software across
-                    Aerospace, Education, and Open Source.
+                    Irvine. When not in lecture, I&apos;m crafting software
+                    across Aerospace, Education, and Open Source.
                 </p>
                 <p className="text-pretty text-lg">
                     Spending Winter at{" "}
