@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         title: "Kevin Wu",
         description:
             "Building products, competing at hackathons, and playing pickleball.",
-        url: "https://www.kevinwu.co",
+        url: "https://www.k3v.in",
         // images: [
         //     {
         //         url: "/ograph.png",
