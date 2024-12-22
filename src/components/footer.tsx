@@ -11,7 +11,7 @@ export function Footer() {
 
                 <p
                     className={cn(
-                        "text-custom-primary font-playfair-display min-w-fit whitespace-nowrap text-lg italic"
+                        "text-custom-primary font-playfair-display min-w-fit whitespace-nowrap text-lg font-semibold italic"
                     )}
                 >
                     Kevin Wu

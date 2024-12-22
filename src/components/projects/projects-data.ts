@@ -40,6 +40,20 @@ export const PROJECT_DATA: Project[] = [
         href: "https://www.antalmanac.com/",
     },
     {
+        title: "Design and Partnership Lab",
+        description: "Supporting student outcomes with ML + EdTech",
+        image: "/work/daplab.png",
+        year: 2024,
+        href: "https://www.daplab.education.uci.edu/",
+    },
+    {
+        title: "UCI Liquids Rocket Project",
+        description: "Building mission-critical control interfaces",
+        image: "/work/rocket-project.png",
+        year: 2024,
+        href: "https://www.rocket.eng.uci.edu/liquids/",
+    },
+    {
         title: "GE-Z",
         description: "Find community college credits that transfer to UCs",
         image: "/work/ge-z.png",

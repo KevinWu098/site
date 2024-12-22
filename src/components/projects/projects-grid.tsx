@@ -46,7 +46,8 @@ export function ProjectsGrid() {
                                 className={cn(
                                     item.href
                                         ? "cursor-pointer"
-                                        : "pointer-events-none"
+                                        : "pointer-events-none",
+                                    "flex h-full"
                                 )}
                                 target="_blank"
                                 referrerPolicy="no-referrer"
@@ -57,7 +58,7 @@ export function ProjectsGrid() {
                                     width={800}
                                     height={800}
                                     className={cn(
-                                        "w-full object-cover",
+                                        "w-full object-cover object-top",
                                         "transition-all duration-300 ease-in-out"
                                     )}
                                 />
