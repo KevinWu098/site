@@ -1,22 +1,13 @@
 import { Playfair_Display } from "next/font/google";
 import Link from "next/link";
-import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
-
-const font = Playfair_Display({
-    subsets: ["latin"],
-    style: ["normal", "italic"],
-    weight: ["400", "500", "600", "700"],
-    display: "swap",
-});
 
 export function Hero() {
     return (
         <div className="w-full space-y-4">
             <h1
                 className={cn(
-                    font.className,
-                    "text-custom-primary text-5xl font-medium italic"
+                    "text-custom-primary font-playfair-display text-5xl font-medium italic"
                 )}
             >
                 Kevin Wu
@@ -54,16 +45,6 @@ export function Hero() {
                     2025).
                 </p>
             </div>
-
-            {/* <div className="border-custom-text w-fit space-x-4 border-t text-base">
-                <Link href={"https://www.linkedin.com/in/kevinwu098"}>
-                    LinkedIn
-                </Link>
-
-                <Link href={"https://devpost.com/kevinwu098"}>Hackathons</Link>
-
-                <Link href={"https://github.com/kevinwu098"}>Github</Link>
-            </div> */}
         </div>
     );
 }

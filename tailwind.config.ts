@@ -86,6 +86,11 @@ const config: Config = {
                     },
                 },
             },
+            fontFamily: {
+                sans: ["var(--font-geist-sans)"],
+                mono: ["var(--font-geist-mono)"],
+                "playfair-display": ["var(--font-playfair-display)", "serif"],
+            },
         },
     },
     plugins: [

@@ -55,8 +55,8 @@ export function ProjectsGrid() {
                                 <Image
                                     src={item.image}
                                     alt={item.title}
-                                    width={500}
-                                    height={0}
+                                    width={800}
+                                    height={800}
                                     className={cn(
                                         "w-full object-cover",
                                         "transition-all duration-300 ease-in-out"
