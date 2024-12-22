@@ -30,6 +30,7 @@ export const PROJECT_DATA: Project[] = [
         description: "Triage 911 calls and reduce critical wait times",
         image: "/work/dispatch.png",
         year: 2024,
+        href: "https://devpost.com/software/dispatch-ai",
     },
     {
         title: "AntAlmanac",
