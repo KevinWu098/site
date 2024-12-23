@@ -13,7 +13,7 @@ export function Hero() {
             </h1>
 
             <div className="space-y-2">
-                <p className="text-pretty text-lg">
+                <p className="text-pretty md:text-lg">
                     I&apos;m a fullstack developer building products,{" "}
                     <Link
                         href={"https://www.devpost.com/kevinwu098"}
@@ -25,12 +25,12 @@ export function Hero() {
                     </Link>
                     , and playing pickleball.
                 </p>
-                <p className="text-pretty text-lg">
+                <p className="text-pretty md:text-lg">
                     Studying Computer Science at the University of California,
                     Irvine. When not in lecture, I&apos;m crafting software
                     across Aerospace, Education, and Open Source.
                 </p>
-                <p className="text-pretty text-lg">
+                <p className="text-pretty md:text-lg">
                     Spending Winter at{" "}
                     <Link
                         href={"https://mercury.com/"}
