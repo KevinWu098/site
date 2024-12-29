@@ -26,7 +26,7 @@ export function ProjectsGrid() {
                 },
             }}
         >
-            {PROJECT_DATA.map((item) => {
+            {PROJECT_DATA.map((item, index) => {
                 return (
                     <motion.div
                         key={item.title}
@@ -61,6 +61,7 @@ export function ProjectsGrid() {
                                         "h-full w-full object-cover object-top",
                                         "transition-all duration-300 ease-in-out"
                                     )}
+                                    priority={index <= 2}
                                 />
                             </Link>
                         </div>
