@@ -1,7 +1,7 @@
-import Link from "next/link";
+import { CONSUME_DATA } from "@/components/consume/consume-data";
+import { ConsumeItem } from "@/components/consume/consume-item";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
-import { BookMarkedIcon, DotIcon } from "lucide-react";
 
 export default function Page() {
     return (
@@ -15,38 +15,21 @@ export default function Page() {
                     consume
                 </h1>
                 <p>
-                    A collection of content I&apos;ve and thoughts apropos said
-                    content. Sophistication, not guaranteed.
+                    A collection of content I&apos;ve consumed and thoughts
+                    apropos said content. Sophistication, not guaranteed.
                 </p>
             </div>
 
             <Separator className="bg-custom-muted/20 mx-auto h-[1px] w-3/4" />
 
-            {/* <div>
-                <div>
-                    <Link
-                        href={"https://qntm.org/scp"}
-                        target="_blank"
-                        referrerPolicy="no-referrer"
-                    >
-                        There Is No Antimemetics Division
-                    </Link>
-
-                    <div className="flex flex-row items-center space-x-1 text-sm">
-                        <div className="flex flex-row items-center space-x-1">
-                            <p className="text-custom-muted">Reading</p>
-                            <BookMarkedIcon className="stroke-custom-muted size-4" />
-                        </div>
-
-                        <DotIcon className="stroke-custom-muted" />
-
-                        <div className="flex flex-row items-center space-x-1">
-                            <p className="text-custom-muted">Reading</p>
-                            <BookMarkedIcon className="stroke-custom-muted size-4" />
-                        </div>
-                    </div>
-                </div>
-            </div> */}
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {CONSUME_DATA.map((item) => (
+                    <ConsumeItem
+                        key={item.title + item.date}
+                        {...item}
+                    />
+                ))}
+            </div>
         </div>
     );
 }

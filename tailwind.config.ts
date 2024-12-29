@@ -61,6 +61,7 @@ const config: Config = {
                     heading: "#f5f5f5",
                     primary: "#16a34a",
                     secondary: "",
+                    bg: "#0a0a0a",
                 },
             },
             borderRadius: {
