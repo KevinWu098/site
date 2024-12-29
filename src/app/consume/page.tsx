@@ -15,7 +15,7 @@ export default function Page() {
                     consume
                 </h1>
                 <p>
-                    A collection of content I've and thoughts apropos said
+                    A collection of content I&apos;ve and thoughts apropos said
                     content. Sophistication, not guaranteed.
                 </p>
             </div>
