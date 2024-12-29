@@ -79,6 +79,6 @@ body {
         @apply pointer-events-none;
     }
     a {
-        @apply hover:decoration-custom-primary transition-all duration-300;
+        @apply hover:decoration-custom-primary underline underline-offset-2 transition-all duration-300;
     }
 }

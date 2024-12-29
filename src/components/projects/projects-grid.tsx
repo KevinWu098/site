@@ -59,7 +59,10 @@ export function ProjectsGrid() {
                                     height={800}
                                     className={cn(
                                         "h-full w-full object-cover object-top",
-                                        "transition-all duration-300 ease-in-out"
+                                        "transition-all duration-300 ease-in-out",
+                                        item.href
+                                            ? "group-hover/image:brightness-90"
+                                            : null
                                     )}
                                     priority={index <= 2}
                                 />

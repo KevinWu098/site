@@ -17,7 +17,6 @@ export function Hero() {
                     I&apos;m a fullstack developer building products,{" "}
                     <Link
                         href={"https://www.devpost.com/kevinwu098"}
-                        className="underline underline-offset-2"
                         target="_blank"
                         referrerPolicy="no-referrer"
                     >
@@ -34,7 +33,6 @@ export function Hero() {
                     Spending Winter at{" "}
                     <Link
                         href={"https://mercury.com/"}
-                        className="underline underline-offset-2"
                         target="_blank"
                         referrerPolicy="no-referrer"
                     >
