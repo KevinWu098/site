@@ -1,3 +1,4 @@
+import { headers } from "next/headers";
 import Link from "next/link";
 import { MetaContent } from "@/components/consume/meta-content";
 import { formatDate, sanitizeTitle } from "@/lib/consume/utils";
@@ -10,12 +11,18 @@ export interface ConsumeItemProps {
 }
 
 export function ConsumeItem({
-    title,
+    title: title,
     category,
     date: _date,
 }: ConsumeItemProps) {
+    const requestHeaders = headers();
+    const pathname = requestHeaders.get("x-current-path");
+
     const date = formatDate(_date);
-    const href = sanitizeTitle(title);
+    const sanitizedTitle = sanitizeTitle(title);
+
+    const href =
+        pathname === "/" ? sanitizedTitle : `${pathname}/${sanitizedTitle}`;
 
     return (
         <div className="border-l-2 border-custom-muted/20 pl-4 transition duration-300 hover:border-custom-primary/50">

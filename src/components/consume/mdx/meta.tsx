@@ -9,7 +9,7 @@ export function Meta() {
     const pathname = usePathname();
 
     const data = CONSUME_DATA.find(
-        (item) => `/${sanitizeTitle(item.title)}` === pathname
+        (item) => `${sanitizeTitle(item.title)}` === pathname.split("/").at(-1)
     );
 
     if (!data) {

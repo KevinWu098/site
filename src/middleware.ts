@@ -15,6 +15,9 @@ export const config = {
 };
 
 export default async function middleware(req: NextRequest) {
+    const headers = new Headers(req.headers);
+    headers.set("x-current-path", req.nextUrl.pathname);
+
     const url = req.nextUrl;
 
     // Get hostname of request (e.g. demo.vercel.pub, demo.localhost:3000)
@@ -55,22 +58,36 @@ export default async function middleware(req: NextRequest) {
         //     );
         // }
 
-        // redirect route to corresponding subdomain
-        if (url.pathname == `/${root}`) {
-            return NextResponse.redirect(
-                new URL(
-                    `${protocol}://${root}.${process.env.NEXT_PUBLIC_ROOT_DOMAIN}`
-                )
-            );
-        }
+        // // redirect route to corresponding subdomain
+        // if (url.pathname == `/${root}`) {
+        //     return NextResponse.redirect(
+        //         new URL(
+        //             `${protocol}://${root}.${process.env.NEXT_PUBLIC_ROOT_DOMAIN}`
+        //         )
+        //     );
+        // }
 
         // rewrite route to corresponding route
         if (hostname == `${subdomain}.${process.env.NEXT_PUBLIC_ROOT_DOMAIN}`) {
-            return NextResponse.rewrite(
-                new URL(`/${root}${path === "/" ? "" : path}`, req.url)
+            return createResponse(
+                NextResponse.rewrite(
+                    new URL(`/${root}${path === "/" ? "" : path}`, req.url)
+                ),
+                headers
             );
         }
     }
 
-    return NextResponse.next();
+    return createResponse(NextResponse.next(), headers);
+}
+
+/**
+ * Temporary helper while subdomains are resolving
+ */
+function createResponse(
+    response: NextResponse,
+    headers: Headers
+): NextResponse {
+    headers.forEach((value, key) => response.headers.set(key, value));
+    return response;
 }
