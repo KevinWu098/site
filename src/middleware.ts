@@ -47,14 +47,22 @@ export default async function middleware(req: NextRequest) {
             req.headers.get("x-forwarded-proto") ||
             (process.env.NODE_ENV === "production" ? "https" : "http");
 
-        // // redirect route to corresponding subdomain
-        // if (url.pathname == `/${root}`) {
-        //      return NextResponse.redirect(
-        //      new URL(
-        //.         `${protocol}://${root}.${process.env.NEXT_PUBLIC_ROOT_DOMAIN}`
-        //       )
+        // if (url.pathname.startsWith(`/${root}/mdx/`)) {
+        //     return NextResponse.rewrite(
+        //         new URL(
+        //             `${protocol}://${process.env.NEXT_PUBLIC_ROOT_DOMAIN}${url.pathname}`
+        //         )
         //     );
         // }
+
+        // redirect route to corresponding subdomain
+        if (url.pathname == `/${root}`) {
+            return NextResponse.redirect(
+                new URL(
+                    `${protocol}://${root}.${process.env.NEXT_PUBLIC_ROOT_DOMAIN}`
+                )
+            );
+        }
 
         // rewrite route to corresponding route
         if (hostname == `${subdomain}.${process.env.NEXT_PUBLIC_ROOT_DOMAIN}`) {
@@ -64,16 +72,5 @@ export default async function middleware(req: NextRequest) {
         }
     }
 
-    // rewrite root application to `/home` folder
-    if (
-        hostname === "localhost:3000" ||
-        hostname === process.env.NEXT_PUBLIC_ROOT_DOMAIN
-    ) {
-        return NextResponse.rewrite(
-            new URL(`${path === "/" ? "" : path}`, req.url)
-        );
-    }
-
-    // rewrite everything else to `/[domain]/[slug] dynamic route
-    return NextResponse.rewrite(new URL(`/${hostname}${path}`, req.url));
+    return NextResponse.next();
 }
