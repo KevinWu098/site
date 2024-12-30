@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { DotIcon } from "lucide-react";
+import { MetaContent } from "@/components/consume/meta-content";
+import { formatDate, sanitizeTitle } from "@/lib/consume/utils";
 
 export interface ConsumeItemProps {
     title: string;
@@ -13,19 +14,11 @@ export function ConsumeItem({
     category,
     date: _date,
 }: ConsumeItemProps) {
-    const date = new Date(_date).toLocaleDateString("en-US", {
-        month: "short",
-        year: "numeric",
-    });
-
-    const href = `${title
-        .toLowerCase()
-        .replace(/[^a-z0-9 ]/g, "")
-        .split(/\s+/)
-        .join("-")}`;
+    const date = formatDate(_date);
+    const href = sanitizeTitle(title);
 
     return (
-        <div className="border-custom-muted/20 hover:border-custom-primary/50 border-l-2 pl-4 transition duration-300">
+        <div className="border-l-2 border-custom-muted/20 pl-4 transition duration-300 hover:border-custom-primary/50">
             <Link
                 href={href}
                 className="no-underline"
@@ -33,11 +26,10 @@ export function ConsumeItem({
                 <div className="flex flex-row items-center space-x-1">
                     <p className="items-center text-pretty">{title}</p>
                 </div>
-                <div className="flex flex-row items-center space-x-1 text-sm">
-                    <p className="text-custom-muted capitalize">{category}</p>
-                    <DotIcon className="stroke-custom-muted" />
-                    <p className="text-custom-muted">{date}</p>
-                </div>
+                <MetaContent
+                    category={category}
+                    date={date}
+                />
             </Link>
         </div>
     );

@@ -9,18 +9,18 @@ export default function Page() {
             <div className="space-y-4">
                 <h1
                     className={cn(
-                        "text-custom-primary font-playfair-display text-4xl font-medium italic"
+                        "font-playfair-display text-4xl font-medium italic text-custom-primary"
                     )}
                 >
                     consume
                 </h1>
                 <p>
-                    A collection of content I&apos;ve consumed and thoughts
+                    A collection of content I&apos;ve encountered and thoughts
                     apropos said content. Sophistication, not guaranteed.
                 </p>
             </div>
 
-            <Separator className="bg-custom-muted/20 mx-auto h-[1px] w-3/4" />
+            <Separator className="mx-auto h-[1px] w-3/4 bg-custom-muted/20" />
 
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {CONSUME_DATA.map((item) => (
