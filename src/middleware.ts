@@ -47,14 +47,14 @@ export default async function middleware(req: NextRequest) {
             req.headers.get("x-forwarded-proto") ||
             (process.env.NODE_ENV === "production" ? "https" : "http");
 
-        // redirect route to corresponding subdomain
-        if (url.pathname == `/${root}`) {
-            return NextResponse.redirect(
-                new URL(
-                    `${protocol}://${root}.${process.env.NEXT_PUBLIC_ROOT_DOMAIN}`
-                )
-            );
-        }
+        // // redirect route to corresponding subdomain
+        // if (url.pathname == `/${root}`) {
+        //      return NextResponse.redirect(
+        //      new URL(
+        //.         `${protocol}://${root}.${process.env.NEXT_PUBLIC_ROOT_DOMAIN}`
+        //       )
+        //     );
+        // }
 
         // rewrite route to corresponding route
         if (hostname == `${subdomain}.${process.env.NEXT_PUBLIC_ROOT_DOMAIN}`) {
