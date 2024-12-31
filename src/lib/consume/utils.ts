@@ -1,5 +1,3 @@
-import { headers } from "next/headers";
-
 export function sanitizeTitle(title: string) {
     return title
         .toLowerCase()
@@ -13,11 +11,4 @@ export function formatDate(date: string) {
         month: "short",
         year: "numeric",
     });
-}
-
-export function getServerSidePathname() {
-    const requestHeaders = headers();
-    const pathname = requestHeaders.get("x-current-path");
-
-    return pathname;
 }

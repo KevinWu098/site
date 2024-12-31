@@ -1,13 +1,12 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import { CONSUME_DATA } from "@/components/consume/consume-data";
 import { MetaContent } from "@/components/consume/meta-content";
-import {
-    formatDate,
-    getServerSidePathname,
-    sanitizeTitle,
-} from "@/lib/consume/utils";
+import { formatDate, sanitizeTitle } from "@/lib/consume/utils";
 
 export function Meta() {
-    const pathname = getServerSidePathname();
+    const pathname = usePathname();
 
     const data = CONSUME_DATA.find(
         (item) =>

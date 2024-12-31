@@ -1,10 +1,7 @@
 import Link from "next/link";
 import { MetaContent } from "@/components/consume/meta-content";
-import {
-    formatDate,
-    getServerSidePathname,
-    sanitizeTitle,
-} from "@/lib/consume/utils";
+import { getServerSidePathname } from "@/lib/consume/getServerSidePathname";
+import { formatDate, sanitizeTitle } from "@/lib/consume/utils";
 
 export interface ConsumeItemProps {
     title: string;
