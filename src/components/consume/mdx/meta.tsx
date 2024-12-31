@@ -1,15 +1,18 @@
-"use client";
-
-import { usePathname } from "next/navigation";
 import { CONSUME_DATA } from "@/components/consume/consume-data";
 import { MetaContent } from "@/components/consume/meta-content";
-import { formatDate, sanitizeTitle } from "@/lib/consume/utils";
+import {
+    formatDate,
+    getServerSidePathname,
+    sanitizeTitle,
+} from "@/lib/consume/utils";
 
 export function Meta() {
-    const pathname = usePathname();
+    const pathname = getServerSidePathname();
 
     const data = CONSUME_DATA.find(
-        (item) => `${sanitizeTitle(item.title)}` === pathname.split("/").at(-1)
+        (item) =>
+            sanitizeTitle(item.title) ===
+            pathname?.split("/").slice(2).join("/")
     );
 
     if (!data) {
@@ -21,7 +24,7 @@ export function Meta() {
 
     return (
         <div>
-            <h1>{title}</h1>
+            <h1 className="mb-1">{title}</h1>
             <MetaContent
                 category={category}
                 date={date}

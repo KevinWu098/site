@@ -1,7 +1,10 @@
-import { headers } from "next/headers";
 import Link from "next/link";
 import { MetaContent } from "@/components/consume/meta-content";
-import { formatDate, sanitizeTitle } from "@/lib/consume/utils";
+import {
+    formatDate,
+    getServerSidePathname,
+    sanitizeTitle,
+} from "@/lib/consume/utils";
 
 export interface ConsumeItemProps {
     title: string;
@@ -15,8 +18,7 @@ export function ConsumeItem({
     category,
     date: _date,
 }: ConsumeItemProps) {
-    const requestHeaders = headers();
-    const pathname = requestHeaders.get("x-current-path");
+    const pathname = getServerSidePathname();
 
     const date = formatDate(_date);
     const sanitizedTitle = sanitizeTitle(title);
