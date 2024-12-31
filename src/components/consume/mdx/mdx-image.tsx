@@ -12,7 +12,7 @@ export function MdxImage({ caption, ...props }: MdxImageProps) {
                 alt={props?.alt ?? props?.src}
                 width={1280}
                 height={480}
-                className="my-0 max-h-[480px] w-fit border border-custom-muted/20 object-contain"
+                className="my-0 max-h-[480px] w-fit max-w-fit border border-custom-muted/20 object-contain"
             />
             <p className="my-0 text-pretty text-sm">{caption}</p>
         </div>
