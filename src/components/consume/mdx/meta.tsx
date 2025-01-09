@@ -9,9 +9,7 @@ export function Meta() {
     const pathname = usePathname();
 
     const data = CONSUME_DATA.find(
-        (item) =>
-            sanitizeTitle(item.title) ===
-            pathname?.split("/").slice(2).join("/")
+        (item) => sanitizeTitle(item.title) === pathname.slice(1) // remove leading slash
     );
 
     if (!data) {

@@ -50,22 +50,23 @@ export default async function middleware(req: NextRequest) {
             req.headers.get("x-forwarded-proto") ||
             (process.env.NODE_ENV === "production" ? "https" : "http");
 
-        // if (url.pathname.startsWith(`/${root}/mdx/`)) {
-        //     return NextResponse.rewrite(
-        //         new URL(
-        //             `${protocol}://${process.env.NEXT_PUBLIC_ROOT_DOMAIN}${url.pathname}`
-        //         )
-        //     );
-        // }
+        if (url.pathname.startsWith(`/${root}/mdx/`)) {
+            return NextResponse.rewrite(
+                new URL(
+                    `${protocol}://${process.env.NEXT_PUBLIC_ROOT_DOMAIN}${url.pathname}`
+                )
+            );
+        }
 
-        // // redirect route to corresponding subdomain
-        // if (url.pathname == `/${root}`) {
-        //     return NextResponse.redirect(
-        //         new URL(
-        //             `${protocol}://${root}.${process.env.NEXT_PUBLIC_ROOT_DOMAIN}`
-        //         )
-        //     );
-        // }
+        // redirect route to corresponding subdomain
+        const splitUrlPathname = url.pathname.split("/");
+        if (splitUrlPathname.slice(0, 2).join("/") == `/${root}`) {
+            return NextResponse.redirect(
+                new URL(
+                    `${protocol}://${root}.${process.env.NEXT_PUBLIC_ROOT_DOMAIN}/${splitUrlPathname.slice(2)}`
+                )
+            );
+        }
 
         // rewrite route to corresponding route
         if (hostname == `${subdomain}.${process.env.NEXT_PUBLIC_ROOT_DOMAIN}`) {
