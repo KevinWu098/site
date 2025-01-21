@@ -40,7 +40,7 @@ export function ProjectsGrid() {
                             ease: "easeOut",
                         }}
                     >
-                        <div className="group/image peer/image aspect-video overflow-hidden rounded-t-sm bg-neutral-800">
+                        <div className="group/image peer/image aspect-video overflow-hidden rounded-t-md bg-neutral-800">
                             <Link
                                 href={item.href ?? ""}
                                 className={cn(
@@ -77,7 +77,7 @@ export function ProjectsGrid() {
                             <div
                                 className={cn(
                                     "flex justify-between",
-                                    "text-custom-heading text-lg transition-colors duration-300 ease-in-out"
+                                    "text-lg text-custom-heading transition-colors duration-300 ease-in-out"
                                 )}
                             >
                                 {item.title}
@@ -85,7 +85,7 @@ export function ProjectsGrid() {
 
                             <div
                                 className={cn(
-                                    "!text-custom-muted text-pretty text-base leading-tight" // selector for descendants needs to be overridden
+                                    "text-pretty text-base leading-tight !text-custom-muted" // selector for descendants needs to be overridden
                                 )}
                             >
                                 {item.description}
