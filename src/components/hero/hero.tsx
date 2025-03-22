@@ -6,7 +6,7 @@ export function Hero() {
         <div className="w-full space-y-4">
             <h1
                 className={cn(
-                    "text-custom-primary font-playfair-display text-5xl font-medium italic"
+                    "font-playfair-display text-5xl font-medium italic text-custom-primary"
                 )}
             >
                 Kevin Wu
@@ -14,7 +14,7 @@ export function Hero() {
 
             <div className="space-y-2">
                 <p className="text-pretty md:text-lg">
-                    I&apos;m a fullstack developer building products,{" "}
+                    {"I'm a fullstack developer building products, "}
                     <Link
                         href={"https://www.devpost.com/kevinwu098"}
                         target="_blank"
@@ -26,8 +26,7 @@ export function Hero() {
                 </p>
                 <p className="text-pretty md:text-lg">
                     Studying Computer Science at the University of California,
-                    Irvine. When not in lecture, I&apos;m crafting software
-                    across Aerospace, Education, and Open Source.
+                    Irvine.
                 </p>
                 <p className="text-pretty md:text-lg">
                     Spending Winter at{" "}
