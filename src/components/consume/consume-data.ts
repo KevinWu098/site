@@ -7,6 +7,11 @@ export const CONSUME_DATA: ConsumeItemProps[] = [
         date: "03/20/2025",
     },
     {
+        title: "Invincible",
+        category: "shows",
+        date: "03/13/2025",
+    },
+    {
         title: "There Is No Antimemetics Division",
         category: "readings",
         date: "12/29/2024",
