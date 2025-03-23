@@ -30,7 +30,7 @@ export function ConsumeItem({
                 className="no-underline"
             >
                 <div className="flex flex-row items-center space-x-1">
-                    <p className="items-center text-pretty">{title}</p>
+                    <p className="items-center truncate">{title}</p>
                 </div>
                 <MetaContent
                     category={category}
