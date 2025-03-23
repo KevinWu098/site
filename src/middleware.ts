@@ -58,25 +58,25 @@ export default async function middleware(req: NextRequest) {
             );
         }
 
-        // // redirect route to corresponding subdomain
-        // const splitUrlPathname = url.pathname.split("/");
-        // if (splitUrlPathname.slice(0, 2).join("/") == `/${root}`) {
-        //     return NextResponse.redirect(
-        //         new URL(
-        //             `${protocol}://${root}.${process.env.NEXT_PUBLIC_ROOT_DOMAIN}/${splitUrlPathname.slice(2)}`
-        //         )
-        //     );
-        // }
+        // redirect route to corresponding subdomain
+        const splitUrlPathname = url.pathname.split("/");
+        if (splitUrlPathname.slice(0, 2).join("/") == `/${root}`) {
+            return NextResponse.redirect(
+                new URL(
+                    `${protocol}://${root}.${process.env.NEXT_PUBLIC_ROOT_DOMAIN}/${splitUrlPathname.slice(2)}`
+                )
+            );
+        }
 
-        // // rewrite route to corresponding route
-        // if (hostname == `${subdomain}.${process.env.NEXT_PUBLIC_ROOT_DOMAIN}`) {
-        //     return createResponse(
-        //         NextResponse.rewrite(
-        //             new URL(`/${root}${path === "/" ? "" : path}`, req.url)
-        //         ),
-        //         headers
-        //     );
-        // }
+        // rewrite route to corresponding route
+        if (hostname == `${subdomain}.${process.env.NEXT_PUBLIC_ROOT_DOMAIN}`) {
+            return createResponse(
+                NextResponse.rewrite(
+                    new URL(`/${root}${path === "/" ? "" : path}`, req.url)
+                ),
+                headers
+            );
+        }
     }
 
     return createResponse(NextResponse.next(), headers);
