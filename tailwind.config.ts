@@ -57,7 +57,7 @@ const config: Config = {
                 },
                 custom: {
                     text: "#f5f5f5",
-                    muted: "#a3a3a3",
+                    muted: "#d4d4d4",
                     heading: "#f5f5f5",
                     primary: "#16a34a",
                     secondary: "",
