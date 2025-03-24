@@ -22,11 +22,8 @@ export function Hero() {
                     >
                         competing at hackathons
                     </Link>
-                    , and playing pickleball.
-                </p>
-                <p className="text-pretty md:text-lg">
-                    Studying Computer Science at the University of California,
-                    Irvine.
+                    , and playing pickleball. Currently studying Computer
+                    Science at the University of California, Irvine.
                 </p>
                 <p className="text-pretty md:text-lg">
                     Spending Winter at{" "}
