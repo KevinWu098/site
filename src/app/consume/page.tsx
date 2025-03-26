@@ -16,7 +16,7 @@ export default function Page() {
                 </h1>
                 <p>
                     A collection of content I&apos;ve encountered and thoughts
-                    apropos said content. Sophistication, not guaranteed.
+                    apropos.
                 </p>
             </div>
 
