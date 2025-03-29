@@ -34,8 +34,7 @@ export function Hero() {
                     >
                         Mercury
                     </Link>{" "}
-                    on the Creative Products team. Incoming at ______ (Summer
-                    2025).
+                    on the Creative Products team.
                 </p>
             </div>
         </div>
