@@ -12,9 +12,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 "prose-h1:font-playfair-display prose-h1:text-3xl prose-h1:font-semibold prose-h1:text-custom-primary",
                 "prose-h2:mt-8 prose-h2:text-2xl prose-h2:font-semibold",
                 "prose-a:font-normal prose-a:text-custom-muted",
+                "prose-code:text-custom-muted",
                 "prose-p:text-custom-muted",
                 "[&_del]:text-custom-muted",
-                "[&_sub]:text-custom-muted"
+                "[&_sub]:text-custom-muted",
+                "prose-blockquote:border-custom-primary"
             )}
         >
             <Back />

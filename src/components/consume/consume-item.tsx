@@ -8,6 +8,7 @@ export interface ConsumeItemProps {
     category: "readings" | "shows" | (string & {}); // https://x.com/mattpocockuk/status/1821926395380986219
     date: string;
     link?: string;
+    legacy?: boolean;
 }
 
 export function ConsumeItem({
@@ -24,7 +25,7 @@ export function ConsumeItem({
         pathname === "/" ? sanitizedTitle : `${pathname}/${sanitizedTitle}`;
 
     return (
-        <div className="border-l-2 border-custom-muted/20 pl-4 transition duration-300 hover:border-custom-primary/50">
+        <div className="border-l-2 border-custom-muted/20 pl-4 transition duration-300 hover:border-custom-primary">
             <Link
                 href={href}
                 className="no-underline"

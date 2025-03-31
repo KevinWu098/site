@@ -18,6 +18,13 @@ export const CONSUME_DATA: ConsumeItemProps[] = [
         link: "https://qntm.org/scp",
     },
     {
+        title: "There Is No Antimemetics Division",
+        category: "readings",
+        date: "12/29/2024",
+        link: "https://qntm.org/scp",
+        legacy: true,
+    },
+    {
         title: "Squid Game | Season Two",
         category: "shows",
         date: "12/28/2024",
@@ -26,4 +33,4 @@ export const CONSUME_DATA: ConsumeItemProps[] = [
     const dateA = new Date(a.date);
     const dateB = new Date(b.date);
     return dateB.getTime() - dateA.getTime();
-});
+})

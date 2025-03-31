@@ -59,7 +59,7 @@ const config: Config = {
                     text: "#f5f5f5",
                     muted: "#d4d4d4",
                     heading: "#f5f5f5",
-                    primary: "#16a34a",
+                    primary: "#16a34a", // green-600
                     secondary: "",
                     bg: "#0a0a0a",
                 },
