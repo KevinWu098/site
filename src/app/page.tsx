@@ -1,6 +1,6 @@
+import { ExperienceGrid } from "@/components/experience/experience-grid";
 import { Hero } from "@/components/hero/hero";
 import { Links } from "@/components/links/links";
-import { ProjectsGrid } from "@/components/projects/projects-grid";
 import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
             <Links />
             <Separator className="mx-auto h-[1px] bg-custom-muted/20" />
 
-            <ProjectsGrid />
+            <ExperienceGrid />
         </div>
     );
 }

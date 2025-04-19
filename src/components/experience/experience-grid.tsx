@@ -2,17 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { PROJECT_DATA } from "@/components/projects/projects-data";
+import { PROJECT_DATA } from "@/components/experience/experience-data";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 
-export function ProjectsGrid() {
+export function ExperienceGrid() {
     return (
         <motion.div
-            className={cn(
-                "grid gap-6",
-                "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-            )}
+            className="grid grid-cols-1 gap-8"
             initial="hidden"
             animate="show"
             variants={{
@@ -30,7 +27,7 @@ export function ProjectsGrid() {
                 return (
                     <motion.div
                         key={item.title}
-                        className="group space-y-4"
+                        className="group grid grid-cols-1 gap-x-4 gap-y-4 sm:grid-cols-2 lg:grid-cols-3"
                         variants={{
                             hidden: { opacity: 0, y: 20 },
                             show: { opacity: 1, y: 0 },
@@ -40,7 +37,36 @@ export function ProjectsGrid() {
                             ease: "easeOut",
                         }}
                     >
-                        <div className="group/image peer/image aspect-video overflow-hidden rounded-t-md bg-neutral-800">
+                        <div className="hidden lg:flex">
+                            {item.time.start}
+                            {item.time.end ? ` — ${item.time.end}` : ""}
+                        </div>
+
+                        <div
+                            className={cn(
+                                "order-2 peer-hover/image:*:text-custom-primary sm:order-1"
+                            )}
+                        >
+                            <div className="order-2 col-span-1 hidden text-sm sm:order-1 sm:col-span-2 sm:flex lg:hidden">
+                                {item.time.start}
+                                {item.time.end ? ` — ${item.time.end}` : ""}
+                            </div>
+
+                            <div
+                                className={cn(
+                                    "flex justify-between",
+                                    "text-lg text-custom-heading transition-colors duration-300 ease-in-out"
+                                )}
+                            >
+                                {item.title}
+                            </div>
+
+                            <div className="text-pretty text-base leading-tight text-custom-muted">
+                                {item.description}
+                            </div>
+                        </div>
+
+                        <div className="group/image peer/image order-1 aspect-video w-full overflow-hidden bg-neutral-800 sm:order-2">
                             <Link
                                 href={item.href ?? ""}
                                 className={cn(
@@ -67,29 +93,6 @@ export function ProjectsGrid() {
                                     priority={index <= 2}
                                 />
                             </Link>
-                        </div>
-
-                        <div
-                            className={cn(
-                                "peer-hover/image:*:text-custom-primary" // *: targets descendants
-                            )}
-                        >
-                            <div
-                                className={cn(
-                                    "flex justify-between",
-                                    "text-lg text-custom-heading transition-colors duration-300 ease-in-out"
-                                )}
-                            >
-                                {item.title}
-                            </div>
-
-                            <div
-                                className={cn(
-                                    "text-pretty text-base leading-tight !text-custom-muted" // selector for descendants needs to be overridden
-                                )}
-                            >
-                                {item.description}
-                            </div>
                         </div>
                     </motion.div>
                 );

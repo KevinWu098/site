@@ -12,6 +12,10 @@ type Project = {
     className?: string;
     badges?: Badges;
     href?: string;
+    time: {
+        start: string;
+        end?: string;
+    };
 };
 
 export const PROJECT_DATA: Project[] = [
@@ -24,6 +28,10 @@ export const PROJECT_DATA: Project[] = [
             work: true,
         },
         href: "https://www.stokespace.com/",
+        time: {
+            start: "June 2024",
+            end: "September 2024",
+        },
     },
     {
         title: "Dispatch AI",
@@ -31,6 +39,12 @@ export const PROJECT_DATA: Project[] = [
         image: "/work/dispatch.png",
         year: 2024,
         href: "https://devpost.com/software/dispatch-ai",
+        time: {
+            start: "June 2024",
+        },
+        badges: {
+            hackathon: true,
+        },
     },
     {
         title: "UCI Liquids Rocket Project",
@@ -38,6 +52,10 @@ export const PROJECT_DATA: Project[] = [
         image: "/work/rocket-project.png",
         year: 2024,
         href: "https://www.rocket.eng.uci.edu/liquids/",
+        time: {
+            start: "June 2024",
+            end: "Present",
+        },
     },
     {
         title: "Design and Partnership Lab",
@@ -45,6 +63,10 @@ export const PROJECT_DATA: Project[] = [
         image: "/work/daplab.png",
         year: 2024,
         href: "https://www.daplab.education.uci.edu/",
+        time: {
+            start: "April 2024",
+            end: "Present",
+        },
     },
     {
         title: "Commit the Change",
@@ -52,6 +74,10 @@ export const PROJECT_DATA: Project[] = [
         image: "/work/ctc.png",
         year: 2024,
         href: "https://ctc-uci.com/",
+        time: {
+            start: "October 2023",
+            end: "Present",
+        },
     },
     {
         title: "AntAlmanac",
@@ -59,6 +85,10 @@ export const PROJECT_DATA: Project[] = [
         image: "/work/antalmanac.png",
         year: 2024,
         href: "https://www.antalmanac.com/",
+        time: {
+            start: "May 2023",
+            end: "Present",
+        },
     },
     {
         title: "GE-Z",
@@ -66,5 +96,8 @@ export const PROJECT_DATA: Project[] = [
         image: "/work/ge-z.png",
         year: 2023,
         href: "https://ge-z.vercel.app/",
+        time: {
+            start: "December 2023",
+        },
     },
 ];
