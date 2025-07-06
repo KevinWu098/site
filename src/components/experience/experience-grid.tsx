@@ -38,8 +38,25 @@ export function ExperienceGrid() {
                         }}
                     >
                         <div className="hidden lg:flex">
-                            {item.time.start}
-                            {item.time.end ? ` — ${item.time.end}` : ""}
+                            <span className="text-custom-muted">
+                                {item.time.start}
+                            </span>
+                            {item.time.end && (
+                                <>
+                                    <span className="text-custom-muted">
+                                        &nbsp;{"—"}&nbsp;
+                                    </span>
+                                    <span
+                                        className={
+                                            item.time.end === "Present"
+                                                ? "text-custom-primary"
+                                                : "text-custom-muted"
+                                        }
+                                    >
+                                        {item.time.end}
+                                    </span>
+                                </>
+                            )}
                         </div>
 
                         <div
@@ -47,9 +64,26 @@ export function ExperienceGrid() {
                                 "order-2 peer-hover/image:*:text-custom-primary sm:order-1"
                             )}
                         >
-                            <div className="order-2 col-span-1 hidden text-sm sm:order-1 sm:col-span-2 sm:flex lg:hidden">
-                                {item.time.start}
-                                {item.time.end ? ` — ${item.time.end}` : ""}
+                            <div
+                                className={cn("order-1 flex text-sm lg:hidden")}
+                            >
+                                <span className="text-custom-muted">
+                                    {item.time.start}
+                                </span>
+                                {item.time.end && (
+                                    <>
+                                        <span>&nbsp;{"—"}&nbsp;</span>
+                                        <span
+                                            className={
+                                                item.time.end === "Present"
+                                                    ? "text-custom-primary"
+                                                    : "text-custom-muted"
+                                            }
+                                        >
+                                            {item.time.end}
+                                        </span>
+                                    </>
+                                )}
                             </div>
 
                             <div
@@ -88,7 +122,8 @@ export function ExperienceGrid() {
                                         "transition-all duration-300 ease-in-out",
                                         item.href
                                             ? "group-hover/image:brightness-90"
-                                            : null
+                                            : null,
+                                        item.imageClassName
                                     )}
                                     priority={index <= 2}
                                 />

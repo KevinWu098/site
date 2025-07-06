@@ -22,19 +22,19 @@ export function Hero() {
                     >
                         competing at hackathons
                     </Link>
-                    , and playing pickleball. Currently studying Computer
-                    Science at the University of California, Irvine.
+                    , and playing pickleball. Studying Computer Science at the
+                    University of California, Irvine.
                 </p>
                 <p className="text-pretty md:text-lg">
-                    Spending Winter at{" "}
+                    Currently at Stripe engineering on{" "}
                     <Link
-                        href={"https://mercury.com/"}
+                        href={"https://stripe.com/payments/link"}
                         target="_blank"
                         referrerPolicy="no-referrer"
                     >
-                        Mercury
-                    </Link>{" "}
-                    on the Creative Products team.
+                        Link
+                    </Link>
+                    .
                 </p>
             </div>
         </div>

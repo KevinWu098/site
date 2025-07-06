@@ -49,10 +49,13 @@ export default function RootLayout({
                 className={cn(
                     `${GeistSans.variable} ${GeistMono.variable} ${font.variable}`,
                     "antialiased",
-                    "bg-custom-bg mx-auto max-w-screen-xl px-4 font-sans md:px-8"
+                    "mx-auto max-w-screen-xl bg-custom-bg px-4 font-sans md:px-8"
                 )}
             >
-                <ReactLenis root>
+                <ReactLenis
+                    root
+                    options={{ lerp: 1 }}
+                >
                     {children}
                     <Footer />
                 </ReactLenis>
