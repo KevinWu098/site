@@ -37,26 +37,28 @@ export function ExperienceGrid() {
                             ease: "easeOut",
                         }}
                     >
-                        <div className="hidden lg:flex">
-                            <span className="text-custom-muted">
-                                {item.time.start}
-                            </span>
-                            {item.time.end && (
-                                <>
-                                    <span className="text-custom-muted">
-                                        &nbsp;{"—"}&nbsp;
-                                    </span>
-                                    <span
-                                        className={
-                                            item.time.end === "Present"
-                                                ? "text-custom-primary"
-                                                : "text-custom-muted"
-                                        }
-                                    >
-                                        {item.time.end}
-                                    </span>
-                                </>
-                            )}
+                        <div className="hidden flex-col lg:flex">
+                            <div>
+                                <span className="text-custom-muted">
+                                    {item.time.start}
+                                </span>
+                                {item.time.end && (
+                                    <>
+                                        <span className="text-custom-muted">
+                                            &nbsp;{"—"}&nbsp;
+                                        </span>
+                                        <span
+                                            className={
+                                                item.time.end === "Present"
+                                                    ? "text-custom-primary"
+                                                    : "text-custom-muted"
+                                            }
+                                        >
+                                            {item.time.end}
+                                        </span>
+                                    </>
+                                )}
+                            </div>
                         </div>
 
                         <div className={cn("order-2 sm:order-1")}>
