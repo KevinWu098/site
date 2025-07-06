@@ -59,11 +59,7 @@ export function ExperienceGrid() {
                             )}
                         </div>
 
-                        <div
-                            className={cn(
-                                "order-2 peer-hover/image:*:text-custom-primary sm:order-1"
-                            )}
-                        >
+                        <div className={cn("order-2 sm:order-1")}>
                             <div
                                 className={cn("order-1 flex text-sm lg:hidden")}
                             >
@@ -100,7 +96,7 @@ export function ExperienceGrid() {
                             </div>
                         </div>
 
-                        <div className="group/image peer/image order-1 aspect-video w-full overflow-hidden bg-neutral-800 sm:order-2">
+                        <div className="group/image order-1 aspect-video w-full overflow-hidden bg-neutral-800 sm:order-2">
                             <Link
                                 href={item.href ?? ""}
                                 className={cn(
@@ -121,7 +117,7 @@ export function ExperienceGrid() {
                                         "h-full w-full object-cover object-top",
                                         "transition-all duration-300 ease-in-out",
                                         item.href
-                                            ? "group-hover/image:brightness-90"
+                                            ? "group-hover/image:brightness-75"
                                             : null,
                                         item.imageClassName
                                     )}
