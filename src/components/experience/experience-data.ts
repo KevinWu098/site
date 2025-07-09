@@ -28,7 +28,7 @@ export const PROJECT_DATA: Project[] = [
         badges: {
             work: true,
         },
-        href: "https://www.stokespace.com/",
+        href: "https://www.stripe.com/",
         time: {
             start: "June 2025",
             end: "Present",
@@ -37,7 +37,7 @@ export const PROJECT_DATA: Project[] = [
     },
     {
         title: "Mercury",
-        description: "Building beautiful experiences",
+        description: "Created sick frontend experiences",
         image: "/work/mercury.jpg",
         year: 2025,
         badges: {
@@ -51,7 +51,7 @@ export const PROJECT_DATA: Project[] = [
     },
     {
         title: "Stoke Space",
-        description: "Amplify engineering productivity",
+        description: "Amplified engineering productivity",
         image: "/work/fusion.jpeg",
         year: 2024,
         badges: {
@@ -76,7 +76,7 @@ export const PROJECT_DATA: Project[] = [
     },
     {
         title: "Dispatch AI",
-        description: "Triage 911 calls and reduce critical wait times",
+        description: "Triage 911 calls, reduce critical wait times",
         image: "/work/dispatch.png",
         year: 2024,
         href: "https://devpost.com/software/dispatch-ai",
@@ -90,7 +90,7 @@ export const PROJECT_DATA: Project[] = [
     },
     {
         title: "UCI Liquids Rocket Project",
-        description: "Building mission-critical control interfaces",
+        description: "Mission-critical control interfaces",
         image: "/work/rocket-project.png",
         year: 2024,
         href: "https://www.rocket.eng.uci.edu/liquids/",

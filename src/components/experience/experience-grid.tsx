@@ -84,14 +84,18 @@ export function ExperienceGrid() {
                                 )}
                             </div>
 
-                            <div
+                            <Link
                                 className={cn(
                                     "flex justify-between",
-                                    "text-lg text-custom-heading transition-colors duration-300 ease-in-out"
+                                    "text-lg text-custom-heading",
+                                    "no-underline transition-none hover:underline"
                                 )}
+                                href={item.href ?? ""}
+                                target="_blank"
+                                referrerPolicy="no-referrer"
                             >
                                 {item.title}
-                            </div>
+                            </Link>
 
                             <div className="text-pretty text-base leading-tight text-custom-muted">
                                 {item.description}
