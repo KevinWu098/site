@@ -88,7 +88,7 @@ export function ExperienceGrid() {
                                 className={cn(
                                     "flex justify-between",
                                     "text-lg text-custom-heading",
-                                    "no-underline transition-none hover:underline"
+                                    "no-underline transition-none hover:underline hover:underline-offset-2"
                                 )}
                                 href={item.href ?? ""}
                                 target="_blank"
