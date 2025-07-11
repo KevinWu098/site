@@ -1,5 +1,15 @@
+"use client";
+
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+
+const Goob = dynamic(
+    () => import("./goob").then((mod) => ({ default: mod.Goob })),
+    {
+        ssr: false,
+    }
+);
 
 export function Hero() {
     return (
@@ -11,6 +21,8 @@ export function Hero() {
             >
                 Kevin Wu
             </h1>
+
+            <Goob />
 
             <div className="space-y-2">
                 <p className="text-pretty md:text-lg">
