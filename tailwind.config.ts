@@ -92,6 +92,9 @@ const config: Config = {
                 mono: ["var(--font-geist-mono)"],
                 "playfair-display": ["var(--font-playfair-display)", "serif"],
             },
+            screens: {
+                xs: "480px",
+            },
         },
     },
     plugins: [
