@@ -128,7 +128,7 @@ export function Hero() {
                 </h1>
 
                 <div
-                    className="xs:flex pointer-events-none absolute inset-0 hidden overflow-hidden"
+                    className="xs:block pointer-events-none absolute inset-0 hidden overflow-hidden"
                     style={{
                         mask: "url(#name-mask)",
                         WebkitMask: "url(#name-mask)",
