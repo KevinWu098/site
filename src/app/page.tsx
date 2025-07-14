@@ -5,7 +5,7 @@ import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
     return (
-        <div className="mx-auto flex w-full flex-col space-y-8 pt-16">
+        <div className="mx-auto flex w-full flex-col space-y-8 pt-8 md:pt-16">
             <Hero />
 
             <Links />
