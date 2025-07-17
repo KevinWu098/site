@@ -127,8 +127,8 @@ export function Hero() {
                     {"Kevin Wu"}
                 </h1>
 
-                {/* <div
-                    className="xs:block pointer-events-none absolute inset-0 hidden overflow-hidden"
+                <div
+                    className="pointer-events-none absolute inset-0 hidden overflow-hidden xs:block"
                     style={{
                         mask: "url(#name-mask)",
                         WebkitMask: "url(#name-mask)",
@@ -145,7 +145,7 @@ export function Hero() {
                             {memoizedFluidCanvas}
                         </ErrorBoundary>
                     </Suspense>
-                </div> */}
+                </div>
             </div>
 
             <div className="z-50 space-y-2">
