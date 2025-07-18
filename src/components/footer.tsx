@@ -7,9 +7,9 @@ export function Footer() {
 
     return (
         <div className="mt-8">
-            <Separator className="bg-custom-muted/20 mx-auto h-[1px]" />
+            <Separator className="mx-auto h-[1px] bg-custom-muted/20" />
 
-            <div className="flex flex-col justify-center">
+            <div className="flex flex-col justify-center py-1">
                 <div className="flex flex-col-reverse justify-between py-4 md:flex-row md:items-center">
                     <p className="text-pretty font-mono text-base font-light tracking-tighter">
                         Built with React, Tailwind, and &#128150;
@@ -20,7 +20,7 @@ export function Footer() {
                     >
                         <p
                             className={cn(
-                                "text-custom-primary font-playfair-display min-w-fit whitespace-nowrap text-lg font-semibold italic"
+                                "min-w-fit whitespace-nowrap font-playfair-display text-lg font-semibold italic text-custom-primary"
                             )}
                         >
                             Kevin Wu
