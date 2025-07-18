@@ -9,8 +9,8 @@ export function Footer() {
         <div className="mt-8">
             <Separator className="mx-auto h-[1px] bg-custom-muted/20" />
 
-            <div className="flex flex-col justify-center py-1">
-                <div className="flex flex-col-reverse justify-between py-4 md:flex-row md:items-center">
+            <div className="flex flex-col justify-center">
+                <div className="flex flex-col-reverse justify-between py-6 md:flex-row md:items-center">
                     <p className="text-pretty font-mono text-base font-light tracking-tighter">
                         Built with React, Tailwind, and &#128150;
                     </p>
