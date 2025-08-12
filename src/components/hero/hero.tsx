@@ -158,8 +158,7 @@ export function Hero() {
                     >
                         competing at hackathons
                     </Link>
-                    , and playing pickleball. Studying Computer Science at the
-                    University of California, Irvine.
+                    , and playing pickleball.
                 </p>
                 <p className="text-pretty md:text-lg">
                     Currently at Stripe engineering on{" "}
@@ -169,8 +168,8 @@ export function Hero() {
                         referrerPolicy="no-referrer"
                     >
                         Link
-                    </Link>
-                    .
+                    </Link>{" "}
+                    and studying Computer Science at UCI.
                 </p>
             </div>
         </div>
