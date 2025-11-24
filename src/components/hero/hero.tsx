@@ -161,15 +161,14 @@ export function Hero() {
                     , and playing pickleball.
                 </p>
                 <p className="text-pretty md:text-lg">
-                    Currently at Stripe engineering on{" "}
+                    Currently studying Computer Science at UCI. Previously at Stripe engineering on{" "}
                     <Link
                         href="https://stripe.com/payments/link"
                         target="_blank"
                         referrerPolicy="no-referrer"
                     >
                         Link
-                    </Link>{" "}
-                    and studying Computer Science at UCI.
+                    </Link>.
                 </p>
             </div>
         </div>

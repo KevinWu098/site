@@ -31,7 +31,7 @@ export const PROJECT_DATA: Project[] = [
         href: "https://www.stripe.com/",
         time: {
             start: "June 2025",
-            end: "Present",
+            end: "September 2025",
         },
         imageClassName: "object-center",
     },
