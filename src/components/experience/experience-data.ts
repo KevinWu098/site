@@ -70,8 +70,8 @@ export const PROJECT_DATA: Project[] = [
         year: 2024,
         href: "https://www.daplab.education.uci.edu/",
         time: {
-            start: "April 2024",
-            end: "Present",
+            start: "2024",
+            end: "2025",
         },
     },
     {
