@@ -121,14 +121,14 @@ export function Hero() {
                 <h1
                     ref={h1Ref}
                     className={cn(
-                        "relative font-playfair-display text-6xl font-medium italic text-custom-primary"
+                        "font-playfair-display text-custom-primary relative text-6xl font-medium italic"
                     )}
                 >
                     {"Kevin Wu"}
                 </h1>
 
                 <div
-                    className="pointer-events-none absolute inset-0 hidden overflow-hidden xs:block"
+                    className="xs:block pointer-events-none absolute inset-0 hidden overflow-hidden"
                     style={{
                         mask: "url(#name-mask)",
                         WebkitMask: "url(#name-mask)",
@@ -164,7 +164,7 @@ export function Hero() {
                     Currently studying Computer Science at UCI. Previously at
                     Stripe engineering on{" "}
                     <Link
-                        href="https://stripe.com/payments/link"
+                        href="https://link.com/"
                         target="_blank"
                         referrerPolicy="no-referrer"
                     >
