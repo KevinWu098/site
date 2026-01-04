@@ -1,3 +1,9 @@
+import { NextRequest, NextResponse } from "next/server";
+
+export default async function middleware(_: NextRequest) {
+    return NextResponse.next();
+}
+
 // import { NextRequest, NextResponse } from "next/server";
 // import { SUBDOMAINS } from "@/subdomains";
 
