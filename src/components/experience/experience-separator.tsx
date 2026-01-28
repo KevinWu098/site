@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { PROJECT_EXPERIENCES } from "@/components/experience/experience-data";
+import { ProjectExperience } from "@/components/experience/experience-data";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -13,18 +13,16 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import { ChevronDownIcon } from "lucide-react";
-import { parseAsStringLiteral, useQueryState } from "nuqs";
 
-export function ExperienceSeparator() {
-    const [experience, setExperience] = useQueryState(
-        "experience",
-        parseAsStringLiteral(PROJECT_EXPERIENCES)
-            .withOptions({
-                shallow: true,
-            })
-            .withDefault("experience")
-    );
+interface ExperienceSeparatorProps {
+    experience: ProjectExperience;
+    setExperience: (value: ProjectExperience) => void;
+}
 
+export function ExperienceSeparator({
+    experience,
+    setExperience,
+}: ExperienceSeparatorProps) {
     const [open, setOpen] = useState(false);
 
     return (
@@ -50,12 +48,7 @@ export function ExperienceSeparator() {
                         <DropdownMenuRadioGroup
                             value={experience}
                             onValueChange={(value) =>
-                                setExperience(
-                                    value as
-                                        | "experience"
-                                        | "organizations"
-                                        | "projects"
-                                )
+                                setExperience(value as ProjectExperience)
                             }
                         >
                             <DropdownMenuRadioItem value="experience">

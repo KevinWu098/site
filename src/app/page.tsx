@@ -1,5 +1,4 @@
-import { ExperienceGrid } from "@/components/experience/experience-grid";
-import { ExperienceSeparator } from "@/components/experience/experience-separator";
+import { ExperienceWrapper } from "@/components/experience/experience-wrapper";
 import { Hero } from "@/components/hero/hero";
 import { Links } from "@/components/links/links";
 
@@ -10,10 +9,7 @@ export default function Home() {
 
             <Links />
 
-            <div className="flex flex-col gap-4">
-                <ExperienceSeparator />
-                <ExperienceGrid />
-            </div>
+            <ExperienceWrapper />
         </div>
     );
 }

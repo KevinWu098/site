@@ -1,25 +1,17 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import {
     PROJECT_DATA,
-    PROJECT_EXPERIENCES,
+    ProjectExperience,
 } from "@/components/experience/experience-data";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
-import { parseAsStringLiteral, useQueryState } from "nuqs";
 
-export function ExperienceGrid() {
-    const [experience, _] = useQueryState(
-        "experience",
-        parseAsStringLiteral(PROJECT_EXPERIENCES)
-            .withOptions({
-                shallow: true,
-            })
-            .withDefault("experience")
-    );
+interface ExperienceGridProps {
+    experience: ProjectExperience;
+}
 
+export function ExperienceGrid({ experience }: ExperienceGridProps) {
     return (
         <motion.div
             className="grid grid-cols-1 gap-8"
