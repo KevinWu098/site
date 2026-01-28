@@ -28,7 +28,7 @@ export function ExperienceSeparator() {
     const [open, setOpen] = useState(false);
 
     return (
-        <div className="relative mx-auto flex max-h-[1px] w-full items-center gap-4">
+        <div className="relative mx-auto flex w-full items-center gap-4">
             <DropdownMenu
                 modal={false}
                 open={open}

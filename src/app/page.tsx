@@ -10,9 +10,10 @@ export default function Home() {
 
             <Links />
 
-            <ExperienceSeparator />
-
-            <ExperienceGrid />
+            <div className="flex flex-col gap-4">
+                <ExperienceSeparator />
+                <ExperienceGrid />
+            </div>
         </div>
     );
 }
