@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 
+import { Suspense } from "react";
 import { Playfair_Display } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { cn } from "@/lib/utils";
@@ -53,7 +54,7 @@ export default function RootLayout({
                 )}
             >
                 <NuqsAdapter>
-                    {children}
+                    <Suspense>{children}</Suspense>
                     <Footer />
                 </NuqsAdapter>
             </body>
