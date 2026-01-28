@@ -4,9 +4,18 @@ export type Badges = {
     hackathon?: boolean;
 };
 
+export const PROJECT_EXPERIENCES = [
+    "experience",
+    "organizations",
+    "projects",
+] as const;
+
+export type ProjectExperience = (typeof PROJECT_EXPERIENCES)[number];
+
 type Project = {
     title: string;
     description: string;
+    experience: ProjectExperience;
     image: string;
     year: number;
     className?: string;
@@ -23,6 +32,7 @@ export const PROJECT_DATA: Project[] = [
     {
         title: "Stripe",
         description: "Engineering on Link",
+        experience: "experience",
         image: "/work/stripe.webp",
         year: 2025,
         badges: {
@@ -38,6 +48,7 @@ export const PROJECT_DATA: Project[] = [
     {
         title: "Mercury",
         description: "Created sick frontend experiences",
+        experience: "experience",
         image: "/work/mercury.jpg",
         year: 2025,
         badges: {
@@ -52,6 +63,7 @@ export const PROJECT_DATA: Project[] = [
     {
         title: "Stoke Space",
         description: "Amplified engineering productivity",
+        experience: "experience",
         image: "/work/fusion.jpeg",
         year: 2024,
         badges: {
@@ -66,6 +78,7 @@ export const PROJECT_DATA: Project[] = [
     {
         title: "Design and Partnership Lab",
         description: "Supporting student outcomes with ML + EdTech",
+        experience: "organizations",
         image: "/work/daplab.png",
         year: 2024,
         href: "https://www.daplab.education.uci.edu/",
@@ -77,6 +90,7 @@ export const PROJECT_DATA: Project[] = [
     {
         title: "Dispatch AI",
         description: "Triage 911 calls, reduce critical wait times",
+        experience: "projects",
         image: "/work/dispatch.png",
         year: 2024,
         href: "https://devpost.com/software/dispatch-ai",
@@ -91,6 +105,7 @@ export const PROJECT_DATA: Project[] = [
     {
         title: "UCI Liquids Rocket Project",
         description: "Mission-critical control interfaces",
+        experience: "organizations",
         image: "/work/rocket-project.png",
         year: 2024,
         href: "https://www.rocket.eng.uci.edu/liquids/",
@@ -102,6 +117,7 @@ export const PROJECT_DATA: Project[] = [
     {
         title: "Commit the Change",
         description: "Pro-bono software solutions for non-profits",
+        experience: "organizations",
         image: "/work/ctc.png",
         year: 2024,
         href: "https://ctc-uci.com/",
@@ -113,6 +129,7 @@ export const PROJECT_DATA: Project[] = [
     {
         title: "AntAlmanac",
         description: "Course exploration and scheduling (10,000 users)",
+        experience: "organizations",
         image: "/work/antalmanac.png",
         year: 2024,
         href: "https://www.antalmanac.com/",
@@ -124,6 +141,7 @@ export const PROJECT_DATA: Project[] = [
     {
         title: "GE-Z",
         description: "Find community college credits that transfer to UCs",
+        experience: "projects",
         image: "/work/ge-z.png",
         year: 2023,
         href: "https://ge-z.vercel.app/",

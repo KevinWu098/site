@@ -1,7 +1,7 @@
 import { ExperienceGrid } from "@/components/experience/experience-grid";
+import { ExperienceSeparator } from "@/components/experience/experience-separator";
 import { Hero } from "@/components/hero/hero";
 import { Links } from "@/components/links/links";
-import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
     return (
@@ -9,7 +9,8 @@ export default function Home() {
             <Hero />
 
             <Links />
-            <Separator className="mx-auto h-[1px] bg-custom-muted/20" />
+
+            <ExperienceSeparator />
 
             <ExperienceGrid />
         </div>

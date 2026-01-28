@@ -4,10 +4,10 @@ import "./globals.css";
 
 import { Playfair_Display } from "next/font/google";
 import { Footer } from "@/components/footer";
-import { ReactLenis } from "@/lib/lenis";
 import { cn } from "@/lib/utils";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 
 export const metadata: Metadata = {
     title: "Kevin Wu",
@@ -49,16 +49,13 @@ export default function RootLayout({
                 className={cn(
                     `${GeistSans.variable} ${GeistMono.variable} ${font.variable}`,
                     "antialiased",
-                    "mx-auto max-w-screen-xl bg-custom-bg px-4 font-sans md:px-8"
+                    "dark mx-auto max-w-screen-xl bg-custom-bg px-4 font-sans md:px-8"
                 )}
             >
-                <ReactLenis
-                    root
-                    options={{ lerp: 1 }}
-                >
+                <NuqsAdapter>
                     {children}
                     <Footer />
-                </ReactLenis>
+                </NuqsAdapter>
             </body>
         </html>
     );
