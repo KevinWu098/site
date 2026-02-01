@@ -14,10 +14,10 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-const FluidCanvas = dynamic(
-    () => import("./fluid-canvas").then((m) => ({ default: m.FluidCanvas })),
-    { ssr: false }
-);
+// const FluidCanvas = dynamic(
+//     () => import("./fluid-canvas").then((m) => ({ default: m.FluidCanvas })),
+//     { ssr: false }
+// );
 
 interface ErrorBoundaryProps {
     children: ReactNode;
@@ -73,14 +73,14 @@ export function Hero() {
         };
     }, []);
 
-    const memoizedFluidCanvas = useMemo(() => {
-        return (
-            <FluidCanvas
-                offsetX={h1Position.x}
-                offsetY={h1Position.y}
-            />
-        );
-    }, [h1Position.x, h1Position.y]);
+    // const memoizedFluidCanvas = useMemo(() => {
+    //     return (
+    //         <FluidCanvas
+    //             offsetX={h1Position.x}
+    //             offsetY={h1Position.y}
+    //         />
+    //     );
+    // }, [h1Position.x, h1Position.y]);
 
     return (
         <div className="w-full space-y-4">
@@ -121,13 +121,13 @@ export function Hero() {
                 <h1
                     ref={h1Ref}
                     className={cn(
-                        "font-playfair-display text-custom-primary relative text-6xl font-medium italic"
+                        "relative font-playfair-display text-6xl font-medium italic text-custom-primary"
                     )}
                 >
                     {"Kevin Wu"}
                 </h1>
 
-                <div
+                {/* <div
                     className="xs:block pointer-events-none absolute inset-0 hidden overflow-hidden"
                     style={{
                         mask: "url(#name-mask)",
@@ -145,7 +145,7 @@ export function Hero() {
                             {memoizedFluidCanvas}
                         </ErrorBoundary>
                     </Suspense>
-                </div>
+                </div> */}
             </div>
 
             <div className="z-50 space-y-2">
