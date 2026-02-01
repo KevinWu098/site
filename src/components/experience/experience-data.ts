@@ -31,7 +31,7 @@ type Project = {
 export const PROJECT_DATA: Project[] = [
     {
         title: "Cloudflare",
-        description: "Building R2",
+        description: "Building R2 object storage",
         experience: "experience",
         image: "/work/cloudflare.webp",
         year: 2026,
@@ -92,6 +92,18 @@ export const PROJECT_DATA: Project[] = [
         },
     },
     {
+        title: "ICS Student Council",
+        description: "Projects Chair — building open-source projects for UCI",
+        experience: "organizations",
+        image: "/work/icssc.png",
+        year: 2026,
+        href: "https://icssc.club/projects",
+        time: {
+            start: "January 2025",
+            end: "Present",
+        },
+    },
+    {
         title: "Design and Partnership Lab",
         description: "Supporting student outcomes with ML + EdTech",
         experience: "organizations",
@@ -132,7 +144,8 @@ export const PROJECT_DATA: Project[] = [
     },
     {
         title: "Commit the Change",
-        description: "Pro-bono software solutions for non-profits",
+        description:
+            "Technical Director — creating pro-bono software solutions for non-profits",
         experience: "organizations",
         image: "/work/ctc.png",
         year: 2024,
