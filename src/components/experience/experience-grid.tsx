@@ -136,6 +136,9 @@ export function ExperienceGrid({ experience }: ExperienceGridProps) {
                                             item.imageClassName
                                         )}
                                         priority={index <= 2}
+                                        fetchPriority={
+                                            index <= 2 ? "high" : "auto"
+                                        }
                                     />
                                 </Link>
                             </div>
