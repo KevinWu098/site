@@ -30,6 +30,22 @@ type Project = {
 
 export const PROJECT_DATA: Project[] = [
     {
+        title: "Cloudflare",
+        description: "Building R2",
+        experience: "experience",
+        image: "/work/cloudflare.webp",
+        year: 2026,
+        badges: {
+            work: true,
+        },
+        href: "https://www.cloudflare.com/",
+        time: {
+            start: "January 2026",
+            end: "Present",
+        },
+        imageClassName: "object-center",
+    },
+    {
         title: "Stripe",
         description: "Engineering on Link",
         experience: "experience",
@@ -49,7 +65,7 @@ export const PROJECT_DATA: Project[] = [
         title: "Mercury",
         description: "Created sick frontend experiences",
         experience: "experience",
-        image: "/work/mercury.jpg",
+        image: "/work/mercury.webp",
         year: 2025,
         badges: {
             work: true,
