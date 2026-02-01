@@ -32,8 +32,8 @@ export const metadata: Metadata = {
 
 const font = Playfair_Display({
     subsets: ["latin"],
-    style: ["normal", "italic"],
-    weight: ["400", "500", "600", "700"],
+    style: ["italic"],
+    weight: ["500", "600"],
     display: "swap",
     variable: "--font-playfair-display",
 });

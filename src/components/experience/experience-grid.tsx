@@ -5,7 +5,6 @@ import {
     ProjectExperience,
 } from "@/components/experience/experience-data";
 import { cn } from "@/lib/utils";
-import { motion } from "motion/react";
 
 interface ExperienceGridProps {
     experience: ProjectExperience;
@@ -13,35 +12,13 @@ interface ExperienceGridProps {
 
 export function ExperienceGrid({ experience }: ExperienceGridProps) {
     return (
-        <motion.div
-            className="grid grid-cols-1 gap-8"
-            // initial="hidden"
-            // animate="show"
-            // variants={{
-            //     hidden: { opacity: 0 },
-            //     show: {
-            //         opacity: 1,
-            //         transition: {
-            //             staggerChildren: 0.1,
-            //             staggerDirection: 1,
-            //         },
-            //     },
-            // }}
-        >
+        <div className="grid grid-cols-1 gap-8">
             {PROJECT_DATA.filter((item) => item.experience === experience).map(
                 (item, index) => {
                     return (
-                        <motion.div
+                        <div
                             key={item.title}
                             className="group grid grid-cols-1 gap-x-4 gap-y-4 sm:grid-cols-2 lg:grid-cols-3"
-                            // variants={{
-                            //     hidden: { opacity: 0, y: 20 },
-                            //     show: { opacity: 1, y: 0 },
-                            // }}
-                            // transition={{
-                            //     duration: 0.6,
-                            //     ease: "easeOut",
-                            // }}
                         >
                             <div className="hidden flex-col lg:flex">
                                 <div>
@@ -142,10 +119,10 @@ export function ExperienceGrid({ experience }: ExperienceGridProps) {
                                     />
                                 </Link>
                             </div>
-                        </motion.div>
+                        </div>
                     );
                 }
             )}
-        </motion.div>
+        </div>
     );
 }
