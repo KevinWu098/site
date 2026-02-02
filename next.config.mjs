@@ -6,7 +6,7 @@ import images from "remark-images";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    transpilePackages: ["geist", "@whatisjery/react-fluid-distortion"],
+    transpilePackages: ["geist"],
     pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
 
     // // https://github.com/vercel/next.js/discussions/36219#discussioncomment-4167863
