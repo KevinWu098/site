@@ -80,7 +80,7 @@ export const PROJECT_DATA: Project[] = [
         title: "Stoke Space",
         description: "Amplified engineering productivity",
         experience: "experience",
-        image: "/work/fusion.jpeg",
+        image: "/work/fusion.webp",
         year: 2024,
         badges: {
             work: true,
@@ -95,7 +95,7 @@ export const PROJECT_DATA: Project[] = [
         title: "ICS Student Council",
         description: "Projects Chair — building open-source projects for UCI",
         experience: "organizations",
-        image: "/work/icssc.png",
+        image: "/work/icssc.webp",
         year: 2026,
         href: "https://icssc.club/projects",
         time: {
@@ -107,7 +107,7 @@ export const PROJECT_DATA: Project[] = [
         title: "Design and Partnership Lab",
         description: "Supporting student outcomes with ML + EdTech",
         experience: "organizations",
-        image: "/work/daplab.png",
+        image: "/work/daplab.webp",
         year: 2024,
         href: "https://www.daplab.education.uci.edu/",
         time: {
@@ -119,7 +119,7 @@ export const PROJECT_DATA: Project[] = [
         title: "Dispatch AI",
         description: "Triage 911 calls, reduce critical wait times",
         experience: "projects",
-        image: "/work/dispatch.png",
+        image: "/work/dispatch.webp",
         year: 2024,
         href: "https://devpost.com/software/dispatch-ai",
         time: {
@@ -134,7 +134,7 @@ export const PROJECT_DATA: Project[] = [
         title: "UCI Liquids Rocket Project",
         description: "Mission-critical control interfaces",
         experience: "organizations",
-        image: "/work/rocket-project.png",
+        image: "/work/rocket-project.webp",
         year: 2024,
         href: "https://www.rocket.eng.uci.edu/liquids/",
         time: {
@@ -147,7 +147,7 @@ export const PROJECT_DATA: Project[] = [
         description:
             "Technical Director — creating pro-bono software solutions for non-profits",
         experience: "organizations",
-        image: "/work/ctc.png",
+        image: "/work/ctc.webp",
         year: 2024,
         href: "https://ctc-uci.com/",
         time: {
@@ -159,7 +159,7 @@ export const PROJECT_DATA: Project[] = [
         title: "AntAlmanac",
         description: "Course exploration and scheduling (10,000 users)",
         experience: "organizations",
-        image: "/work/antalmanac.png",
+        image: "/work/antalmanac.webp",
         year: 2024,
         href: "https://www.antalmanac.com/",
         time: {
@@ -171,7 +171,7 @@ export const PROJECT_DATA: Project[] = [
         title: "GE-Z",
         description: "Find community college credits that transfer to UCs",
         experience: "projects",
-        image: "/work/ge-z.png",
+        image: "/work/ge-z.webp",
         year: 2023,
         href: "https://ge-z.vercel.app/",
         time: {
