@@ -176,6 +176,7 @@ export const PROJECT_DATA: Project[] = [
         href: "https://ge-z.vercel.app/",
         time: {
             start: "2023",
+            end: "2025",
         },
     },
 ];
