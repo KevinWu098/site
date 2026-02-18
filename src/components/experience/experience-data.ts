@@ -30,6 +30,17 @@ type Project = {
 
 export const PROJECT_DATA: Project[] = [
     {
+        title: "Co:Lab",
+        description: "Cursor for chemistry",
+        experience: "projects",
+        image: "/work/colab.png",
+        year: 2026,
+        href: "https://co-lab.kwu.dev/",
+        time: {
+            start: "February 2026",
+        },
+    },
+    {
         title: "Cloudflare",
         description: "Building R2 object storage",
         experience: "experience",
