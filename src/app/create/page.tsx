@@ -1,4 +1,6 @@
-// import { Separator } from "@/components/ui/separator";
+import { CREATE_DATA } from "@/components/create/create-data";
+import { CreateItem } from "@/components/create/create-item";
+import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 
 export default function Page() {
@@ -18,7 +20,16 @@ export default function Page() {
                 </p>
             </div>
 
-            {/* <Separator className="mx-auto h-[1px] w-3/4 bg-custom-muted/20" /> */}
+            <Separator className="mx-auto h-[1px] w-3/4 bg-custom-muted/20" />
+
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {CREATE_DATA.map((item) => (
+                    <CreateItem
+                        key={item.title + item.date}
+                        {...item}
+                    />
+                ))}
+            </div>
         </div>
     );
 }
