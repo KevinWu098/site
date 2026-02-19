@@ -116,7 +116,7 @@ export const PROJECT_DATA: Project[] = [
     },
     {
         title: "Design and Partnership Lab",
-        description: "Supporting student outcomes with ML + EdTech",
+        description: "Supporting student outcomes with AI + EdTech",
         experience: "organizations",
         image: "/work/daplab.webp",
         year: 2024,
