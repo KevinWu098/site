@@ -20,6 +20,12 @@ export const CREATE_DATA: CreateItemProps[] = [
         date: "November 2025",
     },
     {
+        title: "Magic Mirror",
+        category: "projects",
+        link: "https://github.com/kevinwu098/magic-mirror",
+        date: "November 2025",
+    },
+    {
         title: "Radioactive Duck Game",
         category: "projects",
         link: "https://github.com/laurelin60/radioactive-duck-game",
