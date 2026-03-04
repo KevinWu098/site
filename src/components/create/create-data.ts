@@ -2,6 +2,12 @@ import type { CreateItemProps } from "@/components/create/create-item";
 
 export const CREATE_DATA: CreateItemProps[] = [
     {
+        title: "Just Write",
+        category: "projects",
+        link: "https://github.com/kevinwu098/just-write",
+        date: "December 2025",
+    },
+    {
         title: "meme-vault",
         category: "projects",
         link: "https://github.com/kevinwu098/meme-vault",
