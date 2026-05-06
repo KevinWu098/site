@@ -52,7 +52,7 @@ export const PROJECT_DATA: Project[] = [
         href: "https://www.cloudflare.com/",
         time: {
             start: "January 2026",
-            end: "Present",
+            end: "April 2026",
         },
         imageClassName: "object-center",
     },
