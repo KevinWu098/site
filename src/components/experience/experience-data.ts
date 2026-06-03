@@ -33,7 +33,7 @@ export const PROJECT_DATA: Project[] = [
         title: "Codebreaker",
         description: "An agentic cybersecurity harness",
         experience: "projects",
-        image: "/work/codebreaker.webp",
+        image: "/work/codebreaker.png",
         year: 2026,
         href: "https://devpost.com/software/codebreaker-la",
         time: {
