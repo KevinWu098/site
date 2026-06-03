@@ -30,6 +30,17 @@ type Project = {
 
 export const PROJECT_DATA: Project[] = [
     {
+        title: "Codebreaker",
+        description: "An agentic cybersecurity harness",
+        experience: "projects",
+        image: "/work/codebreaker.webp",
+        year: 2026,
+        href: "https://devpost.com/software/codebreaker-la",
+        time: {
+            start: "April 2026",
+        },
+    },
+    {
         title: "Co:Lab",
         description: "Cursor for chemistry",
         experience: "projects",
