@@ -102,7 +102,7 @@ export const PROJECT_DATA: Project[] = [
         title: "Stoke Space",
         description: "Amplified engineering productivity",
         experience: "experience",
-        image: "/work/fusion.webp",
+        image: "/work/stoke-space.svg",
         year: 2024,
         badges: {
             work: true,
