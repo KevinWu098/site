@@ -121,8 +121,8 @@ export const PROJECT_DATA: Project[] = [
         year: 2026,
         href: "https://icssc.club/projects",
         time: {
-            start: "September 2025",
-            end: "June 2026",
+            start: "2025",
+            end: "2026",
         },
     },
     {
