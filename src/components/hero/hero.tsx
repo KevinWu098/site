@@ -29,8 +29,7 @@ export function Hero() {
                     , and playing pickleball.
                 </p>
                 <p className="text-pretty md:text-lg">
-                    Currently studying Computer Science at UCI. Previously at
-                    Stripe engineering on{" "}
+                    Currently at Stripe engineering on{" "}
                     <Link
                         href="https://link.com/"
                         target="_blank"
