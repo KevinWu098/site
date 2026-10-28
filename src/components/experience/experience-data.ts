@@ -52,6 +52,22 @@ export const PROJECT_DATA: Project[] = [
         },
     },
     {
+        title: "Stripe",
+        description: "Engineering on Link",
+        experience: "experience",
+        image: "/work/stripe.webp",
+        year: 2026,
+        badges: {
+            work: true,
+        },
+        href: "https://www.stripe.com/",
+        time: {
+            start: "July 2026",
+            end: "Present",
+        },
+        imageClassName: "object-center",
+    },
+    {
         title: "Cloudflare",
         description: "Building R2 object storage",
         experience: "experience",
