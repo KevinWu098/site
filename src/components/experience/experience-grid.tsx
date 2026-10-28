@@ -17,7 +17,7 @@ export function ExperienceGrid({ experience }: ExperienceGridProps) {
                 (item, index) => {
                     return (
                         <div
-                            key={item.title}
+                            key={`${item.title}-${item.time.start}`}
                             className="group grid grid-cols-1 gap-x-4 gap-y-4 sm:grid-cols-2 lg:grid-cols-3"
                         >
                             <div className="hidden flex-col lg:flex">
